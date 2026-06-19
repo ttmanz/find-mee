@@ -22,7 +22,7 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-  /* ── NAV ─────────────────────────────────────────────────── */
+  /* nav */
   nav {
     position: sticky; top: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
@@ -39,7 +39,7 @@
   }
   .lang-btn.active { background: var(--gold); border-color: var(--gold); color: #090D18; }
 
-  /* ── HERO ────────────────────────────────────────────────── */
+  /* hero */
   .hero {
     min-height: 90vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center; text-align: center;
@@ -64,7 +64,7 @@
     display: inline-flex; align-items: center; gap: 10px;
     padding: 16px 36px; border-radius: 14px; background: var(--gold);
     color: #090D18; font-weight: 800; font-size: 16px;
-    text-decoration: none; border: none; cursor: pointer; transition: all .2s;
+    text-decoration: none; cursor: pointer; transition: all .2s;
   }
   .hero-cta:hover { background: var(--gold-lit); transform: translateY(-2px); }
   .hero-phones {
@@ -80,13 +80,14 @@
   .phone-icon { font-size: 36px; }
   .phone-label { font-size: 11px; color: var(--muted); font-weight: 600; text-align: center; padding: 0 12px; }
 
-  /* ── SECTION BASE ───────────────────────────────────────── */
+  /* sections */
   section { padding: 96px 24px; max-width: 1100px; margin: 0 auto; }
   .section-label { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
   .section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
   .section-sub { color: var(--muted); font-size: 17px; max-width: 560px; line-height: 1.7; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0 24px; }
 
-  /* ── FEATURES ───────────────────────────────────────────── */
+  /* features */
   .features-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; margin-top: 56px;
@@ -100,8 +101,8 @@
   .feature-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
   .feature-desc { color: var(--muted); font-size: 14px; line-height: 1.6; }
 
-  /* ── HOW IT WORKS ───────────────────────────────────────── */
-  .steps { display: flex; flex-direction: column; gap: 0; margin-top: 56px; }
+  /* how it works */
+  .steps { display: flex; flex-direction: column; margin-top: 56px; }
   .step { display: flex; gap: 28px; align-items: flex-start; padding: 32px 0; border-bottom: 1px solid var(--border); }
   .step:last-child { border-bottom: none; }
   .step-num {
@@ -113,17 +114,14 @@
   .step-content h3 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
   .step-content p { color: var(--muted); font-size: 15px; line-height: 1.6; }
 
-  /* ── SURVEY ─────────────────────────────────────────────── */
+  /* survey */
   #survey { max-width: 760px; }
   .survey-wrap {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 24px; padding: 48px 40px; margin-top: 48px;
   }
   .q-block { margin-bottom: 36px; }
-  .q-label {
-    font-size: 15px; font-weight: 700; color: var(--text);
-    margin-bottom: 14px; display: block;
-  }
+  .q-label { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; display: block; }
   .q-num { color: var(--gold); margin-right: 8px; }
   .options-grid { display: flex; flex-wrap: wrap; gap: 10px; }
   .opt-btn {
@@ -156,29 +154,19 @@
   .submit-btn {
     width: 100%; padding: 18px; border-radius: 14px;
     background: var(--gold); border: none; color: #090D18;
-    font-size: 17px; font-weight: 800; cursor: pointer; transition: all .2s;
-    margin-top: 8px;
+    font-size: 17px; font-weight: 800; cursor: pointer; transition: all .2s; margin-top: 8px;
   }
   .submit-btn:hover { background: var(--gold-lit); transform: translateY(-2px); }
   .submit-btn:disabled { opacity: .6; cursor: not-allowed; transform: none; }
-  .success-msg {
-    display: none; text-align: center; padding: 48px 24px;
-  }
+  .success-msg { display: none; text-align: center; padding: 48px 24px; }
   .success-msg .success-icon { font-size: 56px; margin-bottom: 16px; }
   .success-msg h3 { font-size: 24px; font-weight: 800; margin-bottom: 8px; color: var(--gold); }
   .success-msg p { color: var(--muted); font-size: 16px; }
 
-  /* ── FOOTER ─────────────────────────────────────────────── */
-  footer {
-    border-top: 1px solid var(--border); padding: 40px 32px;
-    text-align: center; color: var(--muted); font-size: 14px;
-  }
+  /* footer */
+  footer { border-top: 1px solid var(--border); padding: 40px 32px; text-align: center; color: var(--muted); font-size: 14px; }
   footer span { color: var(--gold); font-weight: 700; }
 
-  /* ── DIVIDER ────────────────────────────────────────────── */
-  .divider { border: none; border-top: 1px solid var(--border); margin: 0 24px; }
-
-  /* ── RESPONSIVE ─────────────────────────────────────────── */
   @media (max-width: 600px) {
     nav { padding: 14px 20px; }
     .survey-wrap { padding: 32px 20px; }
@@ -189,7 +177,6 @@
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────────────── -->
 <nav>
   <div class="nav-logo">Find-Mee</div>
   <div class="lang-switch">
@@ -199,7 +186,6 @@
   </div>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────────────────────── -->
 <div class="hero">
   <div class="hero-badge" data-i18n="badge"></div>
   <h1 data-i18n-html="hero_title"></h1>
@@ -214,48 +200,22 @@
 
 <hr class="divider">
 
-<!-- ── FEATURES ─────────────────────────────────────────────────── -->
 <section>
   <div class="section-label" data-i18n="features_label"></div>
   <h2 class="section-title" data-i18n="features_title"></h2>
   <p class="section-sub" data-i18n="features_sub"></p>
   <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🗺️</div>
-      <div class="feature-title" data-i18n="feat1_title"></div>
-      <div class="feature-desc" data-i18n="feat1_desc"></div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🏆</div>
-      <div class="feature-title" data-i18n="feat2_title"></div>
-      <div class="feature-desc" data-i18n="feat2_desc"></div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <div class="feature-title" data-i18n="feat3_title"></div>
-      <div class="feature-desc" data-i18n="feat3_desc"></div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌙</div>
-      <div class="feature-title" data-i18n="feat4_title"></div>
-      <div class="feature-desc" data-i18n="feat4_desc"></div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎭</div>
-      <div class="feature-title" data-i18n="feat5_title"></div>
-      <div class="feature-desc" data-i18n="feat5_desc"></div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">💬</div>
-      <div class="feature-title" data-i18n="feat6_title"></div>
-      <div class="feature-desc" data-i18n="feat6_desc"></div>
-    </div>
+    <div class="feature-card"><div class="feature-icon">🗺️</div><div class="feature-title" data-i18n="feat1_title"></div><div class="feature-desc" data-i18n="feat1_desc"></div></div>
+    <div class="feature-card"><div class="feature-icon">🏆</div><div class="feature-title" data-i18n="feat2_title"></div><div class="feature-desc" data-i18n="feat2_desc"></div></div>
+    <div class="feature-card"><div class="feature-icon">⚡</div><div class="feature-title" data-i18n="feat3_title"></div><div class="feature-desc" data-i18n="feat3_desc"></div></div>
+    <div class="feature-card"><div class="feature-icon">🌙</div><div class="feature-title" data-i18n="feat4_title"></div><div class="feature-desc" data-i18n="feat4_desc"></div></div>
+    <div class="feature-card"><div class="feature-icon">🎭</div><div class="feature-title" data-i18n="feat5_title"></div><div class="feature-desc" data-i18n="feat5_desc"></div></div>
+    <div class="feature-card"><div class="feature-icon">💬</div><div class="feature-title" data-i18n="feat6_title"></div><div class="feature-desc" data-i18n="feat6_desc"></div></div>
   </div>
 </section>
 
 <hr class="divider">
 
-<!-- ── HOW IT WORKS ─────────────────────────────────────────────── -->
 <section>
   <div class="section-label" data-i18n="how_label"></div>
   <h2 class="section-title" data-i18n="how_title"></h2>
@@ -269,7 +229,6 @@
 
 <hr class="divider">
 
-<!-- ── SURVEY ───────────────────────────────────────────────────── -->
 <section id="survey">
   <div class="section-label" data-i18n="survey_label"></div>
   <h2 class="section-title" data-i18n="survey_title"></h2>
@@ -278,7 +237,6 @@
   <div class="survey-wrap">
     <form id="surveyForm">
 
-      <!-- Q1 Age group -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">01</span><span data-i18n="q1"></span></label>
         <div class="options-grid" data-q="age_group" data-type="single">
@@ -290,13 +248,11 @@
         </div>
       </div>
 
-      <!-- Q2 City -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">02</span><span data-i18n="q2"></span></label>
         <input class="survey-input" id="city" type="text" data-i18n-placeholder="q2_ph">
       </div>
 
-      <!-- Q3 Frequency -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">03</span><span data-i18n="q3"></span></label>
         <div class="options-grid" data-q="frequency" data-type="single">
@@ -307,7 +263,6 @@
         </div>
       </div>
 
-      <!-- Q4 Venue types -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">04</span><span data-i18n="q4"></span></label>
         <div class="options-grid" data-q="venue_types" data-type="multi">
@@ -321,7 +276,6 @@
         </div>
       </div>
 
-      <!-- Q5 How you plan -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">05</span><span data-i18n="q5"></span></label>
         <div class="options-grid" data-q="plan_method" data-type="multi">
@@ -332,7 +286,6 @@
         </div>
       </div>
 
-      <!-- Q6-Q13 Scale questions -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">06</span><span data-i18n="q6"></span></label>
         <div class="scale-row" data-q="coord_difficulty" data-type="scale"></div>
@@ -387,7 +340,6 @@
         <div class="scale-labels"><span class="scale-label-text" data-i18n="scale_ads_low"></span><span class="scale-label-text" data-i18n="scale_ads_high"></span></div>
       </div>
 
-      <!-- Q15 Pay premium -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">15</span><span data-i18n="q14"></span></label>
         <div class="options-grid" data-q="pay_premium" data-type="single">
@@ -397,7 +349,6 @@
         </div>
       </div>
 
-      <!-- Q16 Fair price -->
       <div class="q-block">
         <label class="q-label"><span class="q-num">16</span><span data-i18n="q15"></span></label>
         <div class="options-grid" data-q="fair_price" data-type="single">
@@ -408,7 +359,6 @@
         </div>
       </div>
 
-      <!-- Q16 Open text -->
       <div class="q-block" style="margin-bottom:28px">
         <label class="q-label"><span class="q-num">🌟</span><span data-i18n="q16"></span></label>
         <textarea class="survey-input" id="one_thing" data-i18n-placeholder="q16_ph"></textarea>
@@ -425,13 +375,11 @@
   </div>
 </section>
 
-<!-- ── FOOTER ────────────────────────────────────────────────────── -->
 <footer>
   <p>© 2026 <span>Find-Mee</span>. All rights reserved.</p>
 </footer>
 
 <script>
-// ── TRANSLATIONS ──────────────────────────────────────────────────
 const T = {
   en: {
     badge: '🚀 Coming Soon to iOS & Android',
@@ -441,24 +389,18 @@ const T = {
     features_label: 'Features',
     features_title: 'Everything you need for a great night out',
     features_sub: 'Find-Mee brings together venue discovery, spontaneous plans and local events in one social app.',
-    feat1_title: 'Where to Go',
-    feat1_desc: 'Live map of nearby bars, restaurants, clubs, beaches and coffee shops.',
-    feat2_title: 'Top Venues',
-    feat2_desc: 'Curated rankings of the best spots in your city, updated regularly.',
-    feat3_title: 'Spur of the Moment',
-    feat3_desc: 'Post a spontaneous invite and see who joins you within minutes.',
-    feat4_title: 'Night Out Planner',
-    feat4_desc: 'Organise group nights out, invite friends and manage RSVPs in one place.',
-    feat5_title: 'Activities',
-    feat5_desc: 'Browse theaters, movies, concerts and kids events — then post "I\'m Going".',
-    feat6_title: 'Open Chat',
-    feat6_desc: 'Real-time city chat room to connect with people going out tonight.',
+    feat1_title: 'Where to Go',       feat1_desc: 'Live map of nearby bars, restaurants, clubs, beaches and coffee shops.',
+    feat2_title: 'Top Venues',        feat2_desc: 'Curated rankings of the best spots in your city, updated regularly.',
+    feat3_title: 'Spur of the Moment',feat3_desc: 'Post a spontaneous invite and see who joins you within minutes.',
+    feat4_title: 'Night Out Planner', feat4_desc: 'Organise group nights out, invite friends and manage RSVPs in one place.',
+    feat5_title: 'Activities',        feat5_desc: 'Browse theaters, movies, concerts and kids events — then post "I\'m Going".',
+    feat6_title: 'Open Chat',         feat6_desc: 'Real-time city chat room to connect with people going out tonight.',
     how_label: 'How It Works',
     how_title: 'Up and running in 60 seconds',
-    step1_title: 'Create your profile', step1_desc: 'Sign up with email, Google, Facebook or Apple. Set your city and preferences.',
-    step2_title: 'Discover what\'s happening', step2_desc: 'Browse the map, check Top Venues, see what\'s on tonight or this weekend.',
-    step3_title: 'Make a plan', step3_desc: 'Post a Spur of the Moment invite, plan a Night Out or RSVP to an event.',
-    step4_title: 'Go out & enjoy', step4_desc: 'Connect with friends at the venue, leave reviews and share the night.',
+    step1_title: 'Create your profile',      step1_desc: 'Sign up with email, Google, Facebook or Apple. Set your city and preferences.',
+    step2_title: 'Discover what\'s happening',step2_desc: 'Browse the map, check Top Venues, see what\'s on tonight or this weekend.',
+    step3_title: 'Make a plan',              step3_desc: 'Post a Spur of the Moment invite, plan a Night Out or RSVP to an event.',
+    step4_title: 'Go out & enjoy',           step4_desc: 'Connect with friends at the venue, leave reviews and share the night.',
     survey_label: 'Survey',
     survey_title: 'Help Shape Find-Mee',
     survey_sub: 'Take 2 minutes to share your thoughts. Your feedback directly shapes what we build.',
@@ -471,10 +413,10 @@ const T = {
     q4_a: 'Bars', q4_b: 'Restaurants', q4_c: 'Clubs', q4_d: 'Beaches', q4_e: 'Theaters', q4_f: 'Cinemas', q4_g: 'Concerts',
     q5: 'How do you currently plan your nights out? (select all that apply)',
     q5_a: 'Social media', q5_b: 'Word of mouth', q5_c: 'Apps', q5_d: 'Spontaneously',
-    q6: 'How difficult is it to coordinate going out with friends?',
-    q7: 'How likely are you to use an app to see what\'s happening tonight?',
-    q8: 'How useful would a live map of nearby venues be?',
-    q9: 'Would you use a "Spur of the Moment" feature to make spontaneous plans?',
+    q6:  'How difficult is it to coordinate going out with friends?',
+    q7:  'How likely are you to use an app to see what\'s happening tonight?',
+    q8:  'How useful would a live map of nearby venues be?',
+    q9:  'Would you use a "Spur of the Moment" feature to make spontaneous plans?',
     q10: 'How important is knowing which friends are going to the same venue?',
     q11: 'How useful would a Night Out Planner be for organising group outings?',
     q12: 'How valuable would curated events (movies, concerts, theatre, kids) be?',
@@ -485,8 +427,7 @@ const T = {
     q14: 'Would you pay a monthly membership fee for premium features?',
     q14_a: 'Yes', q14_b: 'Maybe', q14_c: 'No',
     q15: 'If yes, what would be a fair monthly price?',
-    q16: 'What is the one feature you\'d love Find-Mee to have?',
-    q16_ph: 'Tell us your idea…',
+    q16: 'What is the one feature you\'d love Find-Mee to have?', q16_ph: 'Tell us your idea…',
     submit: 'Submit My Answers →',
     success_title: 'Thank you!',
     success_sub: 'Your feedback has been recorded. We\'ll let you know when Find-Mee launches.',
@@ -499,18 +440,12 @@ const T = {
     features_label: 'Λειτουργίες',
     features_title: 'Όλα όσα χρειάζεσαι για μια υπέροχη βραδιά',
     features_sub: 'Το Find-Mee συνδυάζει ανακάλυψη χώρων, αυθόρμητα σχέδια και τοπικές εκδηλώσεις.',
-    feat1_title: 'Πού να πας',
-    feat1_desc: 'Ζωντανός χάρτης με κοντινά μπαρ, εστιατόρια, κλαμπ, παραλίες και καφετέριες.',
-    feat2_title: 'Top Χώροι',
-    feat2_desc: 'Επιλεγμένες κατατάξεις των καλύτερων σημείων στην πόλη σου.',
-    feat3_title: 'Αυθόρμητη Πρόσκληση',
-    feat3_desc: 'Δημοσίευσε μια αυθόρμητη πρόσκληση και δες ποιος σε ακολουθεί.',
-    feat4_title: 'Προγραμματισμός Βραδιάς',
-    feat4_desc: 'Οργάνωσε ομαδικές εξόδους, κάλεσε φίλους και διαχειρίσου RSVPs.',
-    feat5_title: 'Δραστηριότητες',
-    feat5_desc: 'Θέατρο, σινεμά, συναυλίες, παιδικές εκδηλώσεις — και αμέσως "Πάω κι εγώ!"',
-    feat6_title: 'Ανοιχτή Συνομιλία',
-    feat6_desc: 'Chat σε πραγματικό χρόνο με ανθρώπους που βγαίνουν απόψε.',
+    feat1_title: 'Πού να πας',              feat1_desc: 'Ζωντανός χάρτης με κοντινά μπαρ, εστιατόρια, κλαμπ, παραλίες και καφετέριες.',
+    feat2_title: 'Top Χώροι',              feat2_desc: 'Επιλεγμένες κατατάξεις των καλύτερων σημείων στην πόλη σου.',
+    feat3_title: 'Αυθόρμητη Πρόσκληση',   feat3_desc: 'Δημοσίευσε μια αυθόρμητη πρόσκληση και δες ποιος σε ακολουθεί.',
+    feat4_title: 'Προγραμματισμός Βραδιάς',feat4_desc: 'Οργάνωσε ομαδικές εξόδους, κάλεσε φίλους και διαχειρίσου RSVPs.',
+    feat5_title: 'Δραστηριότητες',         feat5_desc: 'Θέατρο, σινεμά, συναυλίες, παιδικές εκδηλώσεις — και αμέσως "Πάω κι εγώ!"',
+    feat6_title: 'Ανοιχτή Συνομιλία',     feat6_desc: 'Chat σε πραγματικό χρόνο με ανθρώπους που βγαίνουν απόψε.',
     how_label: 'Πώς Λειτουργεί',
     how_title: 'Έτοιμος σε 60 δευτερόλεπτα',
     step1_title: 'Δημιούργησε προφίλ', step1_desc: 'Εγγραφή με email, Google, Facebook ή Apple.',
@@ -529,10 +464,10 @@ const T = {
     q4_a: 'Μπαρ', q4_b: 'Εστιατόρια', q4_c: 'Κλαμπ', q4_d: 'Παραλίες', q4_e: 'Θέατρα', q4_f: 'Σινεμά', q4_g: 'Συναυλίες',
     q5: 'Πώς σχεδιάζεις συνήθως τις εξόδους σου; (επίλεξε όλα)',
     q5_a: 'Μέσα κοινωνικής δικτύωσης', q5_b: 'Στόμα με στόμα', q5_c: 'Εφαρμογές', q5_d: 'Αυθόρμητα',
-    q6: 'Πόσο δύσκολο είναι να συντονιστείς με φίλους για έξοδο;',
-    q7: 'Πόσο πιθανό είναι να χρησιμοποιήσεις app για να δεις τι γίνεται απόψε;',
-    q8: 'Πόσο χρήσιμος θα ήταν ένας ζωντανός χάρτης κοντινών χώρων;',
-    q9: 'Θα χρησιμοποιούσες λειτουργία αυθόρμητης πρόσκλησης;',
+    q6:  'Πόσο δύσκολο είναι να συντονιστείς με φίλους για έξοδο;',
+    q7:  'Πόσο πιθανό είναι να χρησιμοποιήσεις app για να δεις τι γίνεται απόψε;',
+    q8:  'Πόσο χρήσιμος θα ήταν ένας ζωντανός χάρτης κοντινών χώρων;',
+    q9:  'Θα χρησιμοποιούσες λειτουργία αυθόρμητης πρόσκλησης;',
     q10: 'Πόσο σημαντικό είναι να ξέρεις ποιοι φίλοι σου πηγαίνουν στον ίδιο χώρο;',
     q11: 'Πόσο χρήσιμος θα ήταν ένας Προγραμματιστής Βραδιάς;',
     q12: 'Πόσο σημαντικές θα ήταν επιλεγμένες τοπικές εκδηλώσεις (σινεμά, συναυλίες, θέατρο, παιδικά);',
@@ -543,8 +478,7 @@ const T = {
     q14: 'Θα πλήρωνες μηνιαία συνδρομή για premium λειτουργίες;',
     q14_a: 'Ναι', q14_b: 'Ίσως', q14_c: 'Όχι',
     q15: 'Αν ναι, ποια τιμή θεωρείς δίκαιη το μήνα;',
-    q16: 'Ποια είναι η μία λειτουργία που θα ήθελες οπωσδήποτε να έχει το Find-Mee;',
-    q16_ph: 'Πες μας την ιδέα σου…',
+    q16: 'Ποια είναι η μία λειτουργία που θα ήθελες οπωσδήποτε να έχει το Find-Mee;', q16_ph: 'Πες μας την ιδέα σου…',
     submit: 'Υποβολή Απαντήσεων →',
     success_title: 'Ευχαριστούμε!',
     success_sub: 'Οι απαντήσεις σου καταγράφηκαν. Θα σε ειδοποιήσουμε όταν κυκλοφορήσει το Find-Mee.',
@@ -557,24 +491,18 @@ const T = {
     features_label: 'Функции',
     features_title: 'Всё необходимое для отличного вечера',
     features_sub: 'Find-Mee объединяет поиск заведений, спонтанные планы и местные события.',
-    feat1_title: 'Куда пойти',
-    feat1_desc: 'Живая карта ближайших баров, ресторанов, клубов, пляжей и кофеен.',
-    feat2_title: 'Топ заведений',
-    feat2_desc: 'Подборка лучших мест в вашем городе, регулярно обновляемая.',
-    feat3_title: 'Спонтанный призыв',
-    feat3_desc: 'Опубликуй спонтанное приглашение и посмотри, кто присоединится.',
-    feat4_title: 'Планировщик вечера',
-    feat4_desc: 'Организуй групповые выходы, приглашай друзей и управляй RSVP.',
-    feat5_title: 'Мероприятия',
-    feat5_desc: 'Театры, кино, концерты, детские события — и сразу "Я иду!"',
-    feat6_title: 'Открытый чат',
-    feat6_desc: 'Чат в реальном времени с людьми, которые выходят сегодня вечером.',
+    feat1_title: 'Куда пойти',         feat1_desc: 'Живая карта ближайших баров, ресторанов, клубов, пляжей и кофеен.',
+    feat2_title: 'Топ заведений',      feat2_desc: 'Подборка лучших мест в вашем городе, регулярно обновляемая.',
+    feat3_title: 'Спонтанный призыв',  feat3_desc: 'Опубликуй спонтанное приглашение и посмотри, кто присоединится.',
+    feat4_title: 'Планировщик вечера', feat4_desc: 'Организуй групповые выходы, приглашай друзей и управляй RSVP.',
+    feat5_title: 'Мероприятия',        feat5_desc: 'Театры, кино, концерты, детские события — и сразу "Я иду!"',
+    feat6_title: 'Открытый чат',       feat6_desc: 'Чат в реальном времени с людьми, которые выходят сегодня вечером.',
     how_label: 'Как это работает',
     how_title: 'Готов за 60 секунд',
-    step1_title: 'Создай профиль', step1_desc: 'Регистрация через email, Google, Facebook или Apple.',
-    step2_title: 'Узнай что происходит', step2_desc: 'Карта, топ заведений, события сегодня или на выходных.',
-    step3_title: 'Составь план', step3_desc: 'Спонтанное приглашение, организация вечера или подтверждение участия.',
-    step4_title: 'Выходи и наслаждайся', step4_desc: 'Встречайся с друзьями, оставляй отзывы, делись ночью.',
+    step1_title: 'Создай профиль',      step1_desc: 'Регистрация через email, Google, Facebook или Apple.',
+    step2_title: 'Узнай что происходит',step2_desc: 'Карта, топ заведений, события сегодня или на выходных.',
+    step3_title: 'Составь план',        step3_desc: 'Спонтанное приглашение, организация вечера или подтверждение участия.',
+    step4_title: 'Выходи и наслаждайся',step4_desc: 'Встречайся с друзьями, оставляй отзывы, делись ночью.',
     survey_label: 'Опрос',
     survey_title: 'Помоги сформировать Find-Mee',
     survey_sub: 'Уделите 2 минуты. Ваши ответы напрямую влияют на то, что мы создаём.',
@@ -587,10 +515,10 @@ const T = {
     q4_a: 'Бары', q4_b: 'Рестораны', q4_c: 'Клубы', q4_d: 'Пляжи', q4_e: 'Театры', q4_f: 'Кинотеатры', q4_g: 'Концерты',
     q5: 'Как вы обычно планируете вечера? (выберите все подходящие)',
     q5_a: 'Соцсети', q5_b: 'Сарафанное радио', q5_c: 'Приложения', q5_d: 'Спонтанно',
-    q6: 'Насколько сложно координировать выходы с друзьями?',
-    q7: 'Насколько вероятно, что вы будете использовать приложение, чтобы узнать, что происходит сегодня?',
-    q8: 'Насколько полезной была бы живая карта ближайших заведений?',
-    q9: 'Использовали бы вы функцию спонтанного приглашения?',
+    q6:  'Насколько сложно координировать выходы с друзьями?',
+    q7:  'Насколько вероятно, что вы будете использовать приложение, чтобы узнать, что происходит сегодня?',
+    q8:  'Насколько полезной была бы живая карта ближайших заведений?',
+    q9:  'Использовали бы вы функцию спонтанного приглашения?',
     q10: 'Насколько важно знать, какие друзья идут в то же заведение?',
     q11: 'Насколько полезен был бы планировщик групповых вечеров?',
     q12: 'Насколько ценными были бы подборки местных событий (кино, концерты, театр, детские)?',
@@ -601,15 +529,13 @@ const T = {
     q14: 'Платили бы вы ежемесячный взнос за премиум-функции?',
     q14_a: 'Да', q14_b: 'Возможно', q14_c: 'Нет',
     q15: 'Если да, какая ежемесячная цена кажется вам справедливой?',
-    q16: 'Какую одну функцию вы хотели бы видеть в Find-Mee?',
-    q16_ph: 'Расскажите вашу идею…',
+    q16: 'Какую одну функцию вы хотели бы видеть в Find-Mee?', q16_ph: 'Расскажите вашу идею…',
     submit: 'Отправить ответы →',
     success_title: 'Спасибо!',
     success_sub: 'Ваши ответы записаны. Мы сообщим вам, когда Find-Mee выйдет.',
   }
 };
 
-// ── STATE & LANG ──────────────────────────────────────────────────
 let currentLang = 'en';
 const answers = {};
 
@@ -630,7 +556,6 @@ function setLang(lang) {
   });
 }
 
-// ── BUILD SCALE BUTTONS ──────────────────────────────────────────
 document.querySelectorAll('[data-type="scale"]').forEach(row => {
   for (let i = 1; i <= 5; i++) {
     const btn = document.createElement('button');
@@ -644,7 +569,6 @@ document.querySelectorAll('[data-type="scale"]').forEach(row => {
   }
 });
 
-// ── OPTION BUTTONS ───────────────────────────────────────────────
 document.querySelectorAll('[data-type="single"], [data-type="multi"]').forEach(grid => {
   grid.querySelectorAll('.opt-btn').forEach(btn => {
     btn.onclick = () => {
@@ -660,16 +584,13 @@ document.querySelectorAll('[data-type="single"], [data-type="multi"]').forEach(g
   });
 });
 
-// ── FORM SUBMIT ──────────────────────────────────────────────────
 document.getElementById('surveyForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = e.target.querySelector('.submit-btn');
   btn.disabled = true;
   btn.textContent = '…';
-
   answers.city = document.getElementById('city').value.trim();
   answers.one_thing = document.getElementById('one_thing').value.trim();
-
   try {
     await fetch('https://mwvtciffmvxjvdphezka.supabase.co/rest/v1/survey_responses', {
       method: 'POST',
@@ -682,14 +603,11 @@ document.getElementById('surveyForm').addEventListener('submit', async (e) => {
       body: JSON.stringify({ lang: currentLang, answers }),
     });
   } catch (_) {}
-
   document.getElementById('surveyForm').style.display = 'none';
-  const msg = document.getElementById('successMsg');
-  msg.style.display = 'block';
+  document.getElementById('successMsg').style.display = 'block';
   setLang(currentLang);
 });
 
-// ── INIT ─────────────────────────────────────────────────────────
 setLang('en');
 </script>
 </body>
