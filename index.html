@@ -381,9 +381,15 @@
         <div class="scale-labels"><span class="scale-label-text" data-i18n="scale_low"></span><span class="scale-label-text" data-i18n="scale_high"></span></div>
       </div>
 
-      <!-- Q14 Pay premium -->
       <div class="q-block">
-        <label class="q-label"><span class="q-num">14</span><span data-i18n="q14"></span></label>
+        <label class="q-label"><span class="q-num">14</span><span data-i18n="q14_ads"></span></label>
+        <div class="scale-row" data-q="ads_annoying" data-type="scale"></div>
+        <div class="scale-labels"><span class="scale-label-text" data-i18n="scale_ads_low"></span><span class="scale-label-text" data-i18n="scale_ads_high"></span></div>
+      </div>
+
+      <!-- Q15 Pay premium -->
+      <div class="q-block">
+        <label class="q-label"><span class="q-num">15</span><span data-i18n="q14"></span></label>
         <div class="options-grid" data-q="pay_premium" data-type="single">
           <div class="opt-btn" data-i18n="q14_a"></div>
           <div class="opt-btn" data-i18n="q14_b"></div>
@@ -391,9 +397,9 @@
         </div>
       </div>
 
-      <!-- Q15 Fair price -->
+      <!-- Q16 Fair price -->
       <div class="q-block">
-        <label class="q-label"><span class="q-num">15</span><span data-i18n="q15"></span></label>
+        <label class="q-label"><span class="q-num">16</span><span data-i18n="q15"></span></label>
         <div class="options-grid" data-q="fair_price" data-type="single">
           <div class="opt-btn">Free</div>
           <div class="opt-btn">€1 – €2</div>
@@ -474,6 +480,8 @@ const T = {
     q12: 'How valuable would curated events (movies, concerts, theatre, kids) be?',
     q13: 'How important is privacy to you in a going-out app?',
     scale_low: 'Not at all', scale_high: 'Extremely',
+    q14_ads: 'How annoying are social media ads to you?',
+    scale_ads_low: 'Not annoying', scale_ads_high: 'Extremely annoying',
     q14: 'Would you pay a monthly membership fee for premium features?',
     q14_a: 'Yes', q14_b: 'Maybe', q14_c: 'No',
     q15: 'If yes, what would be a fair monthly price?',
@@ -530,6 +538,8 @@ const T = {
     q12: 'Πόσο σημαντικές θα ήταν επιλεγμένες τοπικές εκδηλώσεις (σινεμά, συναυλίες, θέατρο, παιδικά);',
     q13: 'Πόσο σημαντική είναι η ιδιωτικότητα σε μια τέτοια εφαρμογή;',
     scale_low: 'Καθόλου', scale_high: 'Πάρα πολύ',
+    q14_ads: 'Πόσο ενοχλητικές σου φαίνονται οι διαφημίσεις στα social media;',
+    scale_ads_low: 'Καθόλου ενοχλητικές', scale_ads_high: 'Εξαιρετικά ενοχλητικές',
     q14: 'Θα πλήρωνες μηνιαία συνδρομή για premium λειτουργίες;',
     q14_a: 'Ναι', q14_b: 'Ίσως', q14_c: 'Όχι',
     q15: 'Αν ναι, ποια τιμή θεωρείς δίκαιη το μήνα;',
@@ -586,6 +596,8 @@ const T = {
     q12: 'Насколько ценными были бы подборки местных событий (кино, концерты, театр, детские)?',
     q13: 'Насколько важна для вас приватность в приложении для выходов?',
     scale_low: 'Совсем нет', scale_high: 'Очень',
+    q14_ads: 'Насколько раздражает вас реклама в социальных сетях?',
+    scale_ads_low: 'Совсем не раздражает', scale_ads_high: 'Очень раздражает',
     q14: 'Платили бы вы ежемесячный взнос за премиум-функции?',
     q14_a: 'Да', q14_b: 'Возможно', q14_c: 'Нет',
     q15: 'Если да, какая ежемесячная цена кажется вам справедливой?',
