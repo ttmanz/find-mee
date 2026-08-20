@@ -1,0 +1,7 @@
+name = "find-mee-share"
+main = "worker.js"
+compatibility_date = "2026-08-20"
+
+routes = [
+  { pattern = "find-mee.com/p/*", zone_name = "find-mee.com" }
+]
