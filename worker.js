@@ -21,9 +21,15 @@ export default {
     target.searchParams.set('id', id);
 
     const upstream = await fetch(target.toString());
-    return new Response(upstream.body, {
+    const html = await upstream.text();
+    // Buffer to text and set Content-Type explicitly rather than passing
+    // upstream.headers through — Cloudflare was silently downgrading the
+    // response to text/plain (plus an injected restrictive CSP) when the
+    // header set was reused as-is, which made browsers show raw HTML source
+    // instead of rendering the page.
+    return new Response(html, {
       status: upstream.status,
-      headers: upstream.headers,
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
     });
   },
 };
