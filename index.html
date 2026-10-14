@@ -60,6 +60,13 @@
     font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); max-width: 600px;
     margin: 0 auto 40px; line-height: 1.7;
   }
+  .store-btn {
+    display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px;
+    background: var(--gold); color: #090D18; border-radius: 12px; font-weight: 800;
+    font-size: 17px; text-decoration: none; transition: transform .15s, opacity .15s;
+  }
+  .store-btn:hover { transform: translateY(-2px); opacity: .92; }
+  .store-btn svg { width: 22px; height: 22px; fill: currentColor; }
   /* sections */
   section { padding: 96px 24px; max-width: 1100px; margin: 0 auto; }
   .section-label { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
@@ -119,6 +126,10 @@
   <div class="hero-badge" data-i18n="badge"></div>
   <h1 data-i18n-html="hero_title"></h1>
   <p data-i18n="hero_sub"></p>
+  <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.ttleisureland.findmee" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.6c-.3.2-.5.6-.5 1.1v18.6c0 .5.2.9.5 1.1l10.4-10.4L3.6 1.6zm11.2 9.1l2.9-2.9L5.3 1l9.5 9.7zm0 2.6L5.3 23l12.4-6.8-2.9-2.9zm4.2-2.1l-2.5-1.4-3 3 3 3 2.6-1.5c.8-.5.8-2.2-.1-3.1z"/></svg>
+    <span data-i18n="play_btn"></span>
+  </a>
 </div>
 
 <hr class="divider">
@@ -157,7 +168,8 @@
 <script>
 const T = {
   en: {
-    badge: '🚀 Coming Soon to iOS & Android',
+    badge: '🚀 Now on Android · iOS Coming Soon',
+    play_btn: 'Get it on Google Play',
     hero_title: 'Your Night<br><span>Starts Here</span>',
     hero_sub: 'Discover venues, events and friends ready to go out — all in one place.',
     features_label: 'Features',
@@ -177,7 +189,8 @@ const T = {
     step4_title: 'Go out & enjoy',           step4_desc: 'Connect with friends at the venue, leave reviews and share the night.',
   },
   el: {
-    badge: '🚀 Σύντομα σε iOS & Android',
+    badge: '🚀 Διαθέσιμο στο Android · iOS σύντομα',
+    play_btn: 'Κατέβασέ το από το Google Play',
     hero_title: 'Η Βραδιά σου<br><span>Αρχίζει Εδώ</span>',
     hero_sub: 'Ανακάλυψε μέρη, εκδηλώσεις και φίλους έτοιμους να βγουν — όλα σε ένα μέρος.',
     features_label: 'Λειτουργίες',
@@ -197,7 +210,8 @@ const T = {
     step4_title: 'Βγες & Διασκέδασε', step4_desc: 'Σύνδεσε με φίλους, άφησε κριτική, μοιράσου τη νύχτα.',
   },
   ru: {
-    badge: '🚀 Скоро на iOS и Android',
+    badge: '🚀 Уже на Android · iOS скоро',
+    play_btn: 'Скачать в Google Play',
     hero_title: 'Твой Вечер<br><span>Начинается Здесь</span>',
     hero_sub: 'Открывай заведения, мероприятия и друзей, готовых выйти — всё в одном месте.',
     features_label: 'Функции',
